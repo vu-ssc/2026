@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSC 2026</title>
+  <meta name="description"
+    content="Social Science Conclave 2026 on Inclusive Development, Social Justice, and Climate Resilience at Vidyasagar University, September 8-9, 2026." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+          },
+          colors: {
+            burgundy: { 900: '#381018', 800: '#591A26' },
+            gold: { 600: '#C5A059', 500: '#DFBA6B', 200: '#f0deb0', 100: '#faf4e1' },
+            parchment: '#F6F4ED',
+          },
+          keyframes: {
+            spin: { '0%': { transform: 'rotate(0deg)' }, '100%': { transform: 'rotate(360deg)' } },
+            pulse: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.5' } },
+            fadeInUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-10px)' } },
+            blob: { '0%, 100%': { transform: 'scale(1) translate(0, 0)' }, '33%': { transform: 'scale(1.2) translate(50px, -50px)' }, '66%': { transform: 'scale(0.9) translate(-30px, 30px)' } },
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+            'pulse-slow': 'pulse 2s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.7s ease forwards',
+            float: 'float 3s ease-in-out infinite',
+            blob: 'blob 15s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-texture">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar">
+    <div class="max-w-[96%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <!-- Logo (visible only when scrolled) -->
+        <div id="navbar-logo" class="flex items-center gap-2">
+          <div class="logo-circle-nav w-10 h-10 rounded-full shadow-sm">
+            <img src="images/logo.png" alt="VU Logo" />
+          </div>
+          <span id="navbar-title" class="font-bold text-xl tracking-tight font-serif text-[#381018]">SSC 2026</span>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 ml-auto">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#themes" class="nav-link">Themes</a>
+          <a href="#timeline" class="nav-link">Deadlines</a>
+          <a href="#register" class="nav-link">Registration</a>
+          <a href="#speakers" class="nav-link">Speakers</a>
+          <a href="#contact" class="nav-link">Contacts</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden ml-auto">
+          <button id="mobile-toggle" class="p-2 rounded-md text-white" aria-label="Toggle menu">
+            <i class="bi bi-list text-2xl" id="menu-icon-open"></i>
+            <i class="bi bi-x-lg text-2xl hidden" id="menu-icon-close"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" role="navigation">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="#" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Home</a>
+        <a href="#about" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">About</a>
+        <a href="#themes" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Themes</a>
+        <a href="#timeline" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Deadlines</a>
+        <a href="#register" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Registration</a>
+        <a href="#speakers" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Speakers</a>
+        <a href="#contact" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Contacts</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="relative overflow-hidden pt-16 sm:pt-18 pb-12 sm:pb-16" style="background-color:#381018;">
+      <!-- Background blobs -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="blob1 absolute rounded-full blur-[120px]"
+          style="width:70%;height:70%;top:-20%;right:-10%;background:rgba(197,160,89,0.30);"></div>
+        <div class="blob2 absolute rounded-full blur-[120px]"
+          style="width:60%;height:60%;bottom:-20%;left:-10%;background:rgba(185,70,70,0.30);"></div>
+        <!-- Mouse follower -->
+        <div id="mouse-follower"></div>
+        <!-- Grid -->
+        <div class="hero-grid"></div>
+        <!-- Particles container -->
+        <div id="particles-container"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[96%] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-0 pb-8">
+        <!-- University Logo -->
+        <div class="flex flex-col items-center mb-6 reveal" id="hero-logo">
+          <div class="logo-circle-hero w-24 h-24 sm:w-28 sm:h-28 rounded-full mb-4">
+            <img src="images/logo.png" alt="Vidyasagar University Logo" />
+          </div>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-widest font-serif uppercase">
+            Vidyasagar University
+          </h2>
+        </div>
+
+        <!-- Title -->
+        <h1
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-6 font-serif uppercase reveal"
+          data-delay="1">
+          Social Science Conclave 2026
+          <br class="hidden md:block" />
+          <span class="text-[#DFBA6B] capitalize text-xl md:text-3xl lg:text-4xl mt-3 block font-serif">
+            Inclusive Development, Social Justice, and Climate Resilience
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="w-full mx-auto text-base md:text-lg text-gray-300 mb-6 leading-relaxed font-medium reveal"
+          data-delay="2">
+          Organised by<br />The Faculty of Arts and Commerce<br />Vidyasagar University
+        </p>
+
+        <!-- Status badge -->
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-gray-300 text-xs sm:text-sm font-medium mb-8 backdrop-blur-sm reveal"
+          data-delay="2" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400"
+            style="animation:pulse 2s ease-in-out infinite;"></span>
+          Abstract submissions open till 12th August, 2026
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 reveal" data-delay="3">
+          <a href="https://forms.gle/Tk3QgXWZqqVqDn5r8" target="_blank" rel="noopener noreferrer" id="btn-register"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full bg-white text-[#381018] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              Register Now
+              <i class="bi bi-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </span>
+          </a>
+          <a href="https://forms.gle/bePB1m9xZHzGcxvZ6" target="_blank" rel="noopener noreferrer" id="btn-submit"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white backdrop-blur-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.10);">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              <i class="bi bi-file-text mr-2"></i>
+              Submit Paper
+            </span>
+          </a>
+        </div>
+
+        <!-- Quick Info Cards -->
+        <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 w-full mx-auto reveal"
+          data-delay="4">
+          <div
+            class="ripple-btn group flex items-center justify-center gap-3 py-3 px-8 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300 cursor-default w-full sm:w-auto"
+            style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);">
+            <span class="ripple-circle"></span>
+            <i class="bi bi-calendar3 text-[#DFBA6B] text-xl relative z-10"></i>
+            <div class="text-left relative z-10">
+              <p class="text-xs text-gray-400 uppercase tracking-wider">Date</p>
+              <p class="text-sm font-medium text-white">September 8-9, 2026</p>
+            </div>
+          </div>
+          <div
+            class="ripple-btn group flex items-center justify-center gap-3 py-3 px-8 rounded-2xl hover:-translate-y-1 hover:shadow-xl transition-all duration-300 cursor-default w-full sm:w-auto"
+            style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);">
+            <span class="ripple-circle"></span>
+            <i class="bi bi-geo-alt text-[#DFBA6B] text-xl relative z-10"></i>
+            <div class="text-left relative z-10">
+              <p class="text-xs text-gray-400 uppercase tracking-wider">Venue</p>
+              <p class="text-sm font-medium text-white">Vidyasagar University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="overflow-hidden bg-transparent py-8 sm:py-10">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center lg:text-left">
+          <div class="lg:pt-4">
+            <div class="max-w-none">
+              <h2 class="text-base font-semibold text-[#C5A059] uppercase tracking-widest text-center reveal">
+                About the Conclave
+              </h2>
+              <div class="mt-6 text-lg text-gray-600 text-justify space-y-4 reveal" data-delay="1">
+                <p>The international adoption of the 2030 Agenda for Sustainable Development in 2015 marked a historic
+                  commitment to achieving a more equitable, inclusive, and environmentally sustainable world. Central to
+                  this agenda are the 17 Sustainable Development Goals, which provide an integrated framework for
+                  addressing global challenges such as poverty, inequality, climate change, and health disparities. For
+                  India, these goals are not merely global obligations but an essential roadmap for national development
+                  and societal transformation.</p>
+                <p>The Social Science Conclave 2026 on "Inclusive Development, Social Justice, and Climate Resilience"
+                  to be held at Vidyasagar University on September 8–9, 2026, seeks to critically examine India's
+                  current position in achieving the SDGs while identifying actionable pathways for their effective
+                  realization. It aims to engage with the "reality" of persistent structural inequalities, regional
+                  disparities, gender gaps, climate vulnerabilities, and post pandemic recovery challenges that continue
+                  to shape India's development trajectory.</p>
+                <p>At the same time, the conclave emphasizes 'realization' through innovative, evidence-based, and
+                  collaborative approaches. It will bring together scholars, policymakers, practitioners, and civil
+                  society actors to foster interdisciplinary dialogue and generate policy-relevant insights. Key
+                  thematic areas of the event include Poverty and Inequality, Health, Nutrition and Well Being,
+                  Education, Gender and Climate Change. By facilitating knowledge exchange and multi-stakeholder
+                  engagement, the conclave intends to bridge the gap between research and policy, strengthen
+                  institutional capacities, and promote region-specific solutions. The outcomes are expected to
+                  contribute to more informed policymaking and grassroots implementation strategies. Ultimately, the
+                  academic platform underscores that India's progress is pivotal to global SDG success and that a
+                  coordinated, inclusive, and context sensitive approach is essential for translating global commitments
+                  into tangible societal outcomes.</p>
+              </div>
+
+              <div
+                class="mt-8 text-3xl font-bold tracking-tight text-[#381018] font-serif sm:text-4xl text-center reveal"
+                data-delay="1">
+                Conclave Objectives
+              </div>
+
+              <ul class="mt-6 mx-auto w-full space-y-6 text-base text-gray-600 text-left">
+                <li class="relative pl-12 reveal-left" data-delay="3">
+                  <i class="bi bi-bullseye absolute left-1 top-1 text-[#C5A059] text-xl"></i>
+                  To critically analyse India's progress and shortcomings across selected SDGs, with particular emphasis
+                  on SDG 3 (Good Health and Well-Being) and SDG 4 (Quality Education).
+                </li>
+                <li class="relative pl-12 reveal-left" data-delay="4">
+                  <i class="bi bi-people absolute left-1 top-1 text-[#C5A059] text-xl"></i>
+                  To examine the intersecting dimensions of poverty, malnutrition, gender inequality, and climate
+                  vulnerability within India's diverse social arrangement.
+                </li>
+                <li class="relative pl-12 reveal-left" data-delay="3">
+                  <i class="bi bi-map absolute left-1 top-1 text-[#C5A059] text-xl"></i>
+                  To identify regional disparities in SDG attainment and understand the structural factors underlying
+                  these disparities.
+                </li>
+                <li class="relative pl-12 reveal-left" data-delay="4">
+                  <i class="bi bi-chat-dots absolute left-1 top-1 text-[#C5A059] text-xl"></i>
+                  To facilitate interdisciplinary dialogue that can facilitate social science research along with policy
+                  formulation.
+                </li>
+                <li class="relative pl-12 reveal-left" data-delay="5">
+                  <i class="bi bi-lightbulb absolute left-1 top-1 text-[#C5A059] text-xl"></i>
+                  To develop actionable, context-sensitive strategies for inclusive and sustainable development,
+                  especially for marginalized and vulnerable sections of society.
+                </li>
+              </ul>
+
+              <div class="mt-6 text-center rounded-3xl p-10 w-full mx-auto shadow-md backdrop-blur-sm reveal"
+                data-delay="4" style="background:rgba(250,244,225,0.5);border:1px solid rgba(197,160,89,0.25);">
+                <h3 class="text-3xl font-bold tracking-tight text-[#381018] font-serif sm:text-4xl mb-6">Target
+                  Participants</h3>
+                <p class="text-lg text-gray-700 text-justify">
+                  The event is open to academicians, research scholars, students, working professionals and anyone
+                  interested to contribute towards sustainable development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== THEMES (Call for Papers) ==================== -->
+    <section id="themes" class="relative bg-white py-8 sm:py-10 overflow-hidden">
+      <!-- Abstract background shapes -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="section-blob-1 absolute rounded-full blur-3xl"
+          style="width:50vw;height:50vw;top:-10%;left:-10%;background:rgba(56,16,24,0.03);"></div>
+        <div class="section-blob-2 absolute rounded-full blur-3xl"
+          style="width:40vw;height:40vw;top:20%;right:-10%;background:rgba(197,160,89,0.04);"></div>
+        <div class="section-blob-3 absolute rounded-full blur-3xl"
+          style="width:60vw;height:60vw;bottom:-20%;left:20%;background:rgba(30,58,138,0.02);"></div>
+        <!-- Morphing shapes -->
+        <div class="morph-shape absolute opacity-5"
+          style="width:200px;height:200px;top:10%;left:70%;background:linear-gradient(135deg,#C5A059,#381018);"></div>
+        <div class="morph-shape absolute opacity-5"
+          style="width:150px;height:150px;top:60%;left:5%;background:linear-gradient(135deg,#DFBA6B,#591A26);animation-delay:5s;">
+        </div>
+        <div class="morph-shape absolute opacity-5"
+          style="width:250px;height:250px;top:80%;left:80%;background:linear-gradient(135deg,#381018,#C5A059);animation-delay:10s;">
+        </div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Call for Papers
+          </p>
+          <p class="mt-6 text-lg text-gray-600 reveal" data-delay="1">
+            The Social Science Conclave invites original papers on the following sub-themes:
+          </p>
+        </div>
+
+        <div class="mx-auto mt-6 w-full sm:mt-8 lg:mt-6">
+          <div class="flex flex-wrap justify-center gap-6">
+            <!-- Theme 1: Poverty & Inequality -->
+            <div
+              class="spin-border-wrapper w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] shadow-sm hover:shadow-xl hover-lift group min-h-[220px] reveal"
+              data-delay="1">
+              <div class="spin-border"
+                style="background:conic-gradient(from 90deg at 50% 50%,transparent 0%,#f43f5e 50%,transparent 100%);">
+              </div>
+              <div
+                class="inner-card bg-white p-6 flex flex-col items-center text-center justify-between border border-gray-100 group-hover:border-transparent transition-colors">
+                <div class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Sub-theme 1</div>
+                <div
+                  class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-500/10 text-rose-700 transition-transform group-hover:scale-110">
+                  <i class="bi bi-graph-down-arrow text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-[#381018] leading-tight">Poverty and Inequality</h3>
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none rounded-[22px]">
+                </div>
+              </div>
+            </div>
+            <!-- Theme 2: Health -->
+            <div
+              class="spin-border-wrapper w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] shadow-sm hover:shadow-xl hover-lift group min-h-[220px] reveal"
+              data-delay="2">
+              <div class="spin-border"
+                style="background:conic-gradient(from 90deg at 50% 50%,transparent 0%,#10b981 50%,transparent 100%);">
+              </div>
+              <div
+                class="inner-card bg-white p-6 flex flex-col items-center text-center justify-between border border-gray-100 group-hover:border-transparent transition-colors">
+                <div class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Sub-theme 2</div>
+                <div
+                  class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-700 transition-transform group-hover:scale-110">
+                  <i class="bi bi-heart-pulse text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-[#381018] leading-tight">Health, Nutrition and Well Being</h3>
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none rounded-[22px]">
+                </div>
+              </div>
+            </div>
+            <!-- Theme 3: Education -->
+            <div
+              class="spin-border-wrapper w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] shadow-sm hover:shadow-xl hover-lift group min-h-[220px] reveal"
+              data-delay="3">
+              <div class="spin-border"
+                style="background:conic-gradient(from 90deg at 50% 50%,transparent 0%,#a855f7 50%,transparent 100%);">
+              </div>
+              <div
+                class="inner-card bg-white p-6 flex flex-col items-center text-center justify-between border border-gray-100 group-hover:border-transparent transition-colors">
+                <div class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Sub-theme 3</div>
+                <div
+                  class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/10 text-purple-700 transition-transform group-hover:scale-110">
+                  <i class="bi bi-mortarboard text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-[#381018] leading-tight">Education</h3>
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none rounded-[22px]">
+                </div>
+              </div>
+            </div>
+            <!-- Theme 4: Gender -->
+            <div
+              class="spin-border-wrapper w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] shadow-sm hover:shadow-xl hover-lift group min-h-[220px] reveal"
+              data-delay="4">
+              <div class="spin-border"
+                style="background:conic-gradient(from 90deg at 50% 50%,transparent 0%,#3b82f6 50%,transparent 100%);">
+              </div>
+              <div
+                class="inner-card bg-white p-6 flex flex-col items-center text-center justify-between border border-gray-100 group-hover:border-transparent transition-colors">
+                <div class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Sub-theme 4</div>
+                <div
+                  class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-700 transition-transform group-hover:scale-110">
+                  <i class="bi bi-gender-ambiguous text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-[#381018] leading-tight">Gender</h3>
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none rounded-[22px]">
+                </div>
+              </div>
+            </div>
+            <!-- Theme 5: Climate Change -->
+            <div
+              class="spin-border-wrapper w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] shadow-sm hover:shadow-xl hover-lift group min-h-[220px] reveal"
+              data-delay="5">
+              <div class="spin-border"
+                style="background:conic-gradient(from 90deg at 50% 50%,transparent 0%,#f59e0b 50%,transparent 100%);">
+              </div>
+              <div
+                class="inner-card bg-white p-6 flex flex-col items-center text-center justify-between border border-gray-100 group-hover:border-transparent transition-colors">
+                <div class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Sub-theme 5</div>
+                <div
+                  class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-700 transition-transform group-hover:scale-110">
+                  <i class="bi bi-cloud-rain text-3xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-[#381018] leading-tight">Climate Change</h3>
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50 opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none rounded-[22px]">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center max-w-2xl mx-auto reveal" data-delay="2">
+            <p class="text-gray-600 italic">
+              This is only an indicative list. Any paper that does not fall under the subject mentioned above but is
+              related to the conclave theme is welcome.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TIMELINE (Deadlines) ==================== -->
+    <section id="timeline" class="py-8 sm:py-10" style="background-color:#FAFAFA;">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto w-full text-center mb-6">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Deadlines
+          </p>
+        </div>
+
+        <!-- ===== NEW INTERACTIVE TIMELINE WRAPPER ===== -->
+        <div id="timeline-interactive" class="mx-auto w-full relative" style="cursor:crosshair;">
+
+          <!-- Canvas for glowing line (desktop only) -->
+          <canvas id="timeline-canvas" class="hidden md:block absolute inset-0 pointer-events-none"
+            style="z-index:1;"></canvas>
+
+
+
+          <!-- Items wrapper -->
+          <div class="relative" style="z-index:3;">
+            <!-- Mobile: plain left border -->
+            <div class="relative border-l border-gray-200 ml-3 md:ml-0 md:border-none">
+
+              <div class="space-y-4">
+
+                <!-- Item 1: Submission of abstract | color: green -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="1" data-color="#22c55e" data-glow="rgba(34,197,94,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Submission of
+                      abstract</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#22c55e;">
+                      August 12, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Submission of abstract</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#22c55e;">August 12, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 2: Intimation of acceptance | color: lime/yellow-green -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="2" data-color="#84cc16" data-glow="rgba(132,204,22,0.7)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Intimation of
+                      acceptance</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#84cc16;">
+                      August 15, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Intimation of acceptance</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#84cc16;">August 15, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 3: Early bird registration | color: yellow -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="3" data-color="#eab308" data-glow="rgba(234,179,8,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Early bird
+                      registration</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#eab308;">
+                      August 20, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Early bird registration</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#eab308;">August 20, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 4: Late Bird Registration | color: orange -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="3" data-color="#f97316" data-glow="rgba(249,115,22,0.7)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Late Bird
+                      Registration</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#f97316;">
+                      August 25, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Late Bird Registration</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#f97316;">August 25, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 5: Submission of full paper | color: red -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="4" data-color="#ef4444" data-glow="rgba(239,68,68,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Submission of full
+                      paper</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#ef4444;">
+                      August 31, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Submission of full paper</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#ef4444;">August 31, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 6: Conclave Dates | color: gold -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="5" data-color="#d4af37" data-glow="rgba(212,175,55,0.85)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Conclave Dates
+                    </h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#d4af37;">
+                      September 8-9, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Conclave Dates</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#d4af37;">September 8-9, 2026</p>
+                  </div>
+                </div>
+
+              </div><!-- /space-y-4 -->
+            </div>
+          </div><!-- /z-index:3 -->
+        </div><!-- /#timeline-interactive -->
+
+        <!-- Paper Submission Box -->
+        <div id="submit"
+          class="mt-6 mx-auto max-w-none bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 text-center reveal"
+          data-delay="2">
+          <h3 class="text-3xl font-bold text-[#381018] font-serif mb-6">Paper Submission</h3>
+          <p class="text-lg text-gray-700 mb-6 w-full mx-auto text-center">
+            For any kind of correspondence relating to the Conclave (including paper submission), email should be sent
+            to
+            <a href="mailto:sscvu@mail.vidyasagar.ac.in"
+              class="text-[#C5A059] font-semibold hover:text-[#DFBA6B] underline-gold">sscvu@mail.vidyasagar.ac.in</a>
+          </p>
+          <p class="text-lg text-gray-700 mb-8 flex items-center justify-center gap-4 flex-wrap">
+            For submission details,
+            <a href="public/submission-guidelines.pdf" target="_blank" rel="noopener noreferrer" id="btn-submission"
+              class="ripple-btn group inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold uppercase tracking-wider rounded-full text-white hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              style="background:#C5A059;">
+              <span class="ripple-circle"></span>
+              <span class="relative z-10">CLICK HERE</span>
+            </a>
+          </p>
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <p class="text-sm font-medium text-gray-600 italic">
+              Note: Registration is mandatory for paper presenters. Selected papers will be published by a reputed
+              International publication house.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REGISTRATION (Pricing) ==================== -->
+    <section id="register" class="py-8 sm:py-10" style="background-color:#FAFAFA;">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Registration Details
+          </p>
+        </div>
+
+        <div class="mx-auto mt-8 w-full overflow-hidden rounded-3xl shadow-lg ring-1 ring-gray-200 bg-white reveal"
+          data-delay="1">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-gray-700">
+              <thead style="background:#381018;color:white;">
+                <tr>
+                  <th scope="col" class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap">Categories</th>
+                  <th scope="col"
+                    class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap border-l border-white/20">
+                    Early Bird Registration<br />
+                    <span class="text-sm font-normal text-gray-300">(within 20th August, 2026)</span>
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap border-l border-white/20">
+                    Late Bird Registration Fees<br />
+                    <span class="text-sm font-normal text-gray-300">(after early bird closes till 25th August,
+                      2026)</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover-row">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Faculty members / Early career professionals
+                  </td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 2000</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 2500</td>
+                </tr>
+                <tr class="hover-row" style="background:rgba(249,250,251,0.5);">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Research Scholars</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 750</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 1000</td>
+                </tr>
+                <tr class="hover-row">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Corporate Delegates</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 3000</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 3500</td>
+                </tr>
+                <tr class="hover-row" style="background:rgba(249,250,251,0.5);">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Foreign delegates</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">$ 50</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">$ 60</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="mt-6 mx-auto w-full bg-white rounded-3xl p-10 ring-1 ring-gray-200 shadow-xl reveal" data-delay="2">
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold text-[#381018] font-serif">Payment Details</h3>
+            <p class="mt-3 text-base text-gray-600">The registration is to be paid online through NEFT/UPI.</p>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8">
+            <!-- Bank Details -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex-1">
+              <h4 class="text-lg font-semibold text-[#381018] mb-5 border-b pb-3">Bank Details</h4>
+              <ul class="space-y-4 text-base text-gray-700">
+                <li><span class="font-medium">Name of Beneficiary:</span> Social science conclave</li>
+                <li><span class="font-medium">Account Number:</span> 17480110111406</li>
+                <li><span class="font-medium">Type of Account:</span> Savings</li>
+                <li><span class="font-medium">Name of the Bank:</span> UCO Bank</li>
+                <li><span class="font-medium">Branch:</span> Vidyasagar University Branch, Midnapore</li>
+                <li><span class="font-medium">IFSC:</span> UCBA0001748</li>
+                <li><span class="font-medium">Swift Code:</span> UCBAINDB102</li>
+              </ul>
+              <p class="mt-6 text-sm text-gray-500 italic border-t pt-4 border-gray-200">
+                * Note: The proof of payment is to be produced at the time of registration. Spot registration is not
+                allowed.
+              </p>
+            </div>
+            <!-- QR Code -->
+            <div
+              class="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-8 border border-gray-100 md:w-96 shrink-0">
+              <p class="text-base font-semibold text-[#381018] mb-4 uppercase tracking-wider">Scan to Pay (UPI)</p>
+              <img id="qr-img" src="images/QR.png" alt="UPI QR Code"
+                class="w-80 h-80 object-contain rounded-xl shadow-md" />
+              <p class="mt-4 text-sm text-gray-500 text-center">Scan the QR code with any UPI app to make payment</p>
+              <!-- Full Screen Button -->
+              <button id="qr-fullscreen-btn" onclick="openQrModal()"
+                class="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-[#381018] text-white hover:bg-[#C5A059] transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95">
+                <i class="bi bi-fullscreen"></i>
+                Full Screen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 reveal" data-delay="3">
+          <a href="https://forms.gle/Tk3QgXWZqqVqDn5r8" target="_blank" rel="noopener noreferrer"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="background:#381018;">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              Register Now
+              <i class="bi bi-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </span>
+          </a>
+          <a href="https://forms.gle/bePB1m9xZHzGcxvZ6" target="_blank" rel="noopener noreferrer"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="background:#C5A059;">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              <i class="bi bi-file-text mr-2"></i>
+              Submit Paper
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SPEAKERS ==================== -->
+    <section id="speakers" class="relative bg-white py-8 sm:py-10 overflow-hidden">
+      <!-- Abstract background shapes -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="section-blob-1 absolute rounded-full blur-3xl"
+          style="width:40vw;height:40vw;top:10%;left:10%;background:rgba(30,58,138,0.03);"></div>
+        <div class="section-blob-2 absolute rounded-full blur-3xl"
+          style="width:50vw;height:50vw;bottom:-10%;right:10%;background:rgba(197,160,89,0.03);"></div>
+        <div class="section-blob-3 absolute rounded-full blur-3xl"
+          style="width:45vw;height:45vw;top:40%;left:-20%;background:rgba(16,185,129,0.02);"></div>
+        <!-- Morphing shapes -->
+        <div class="morph-shape absolute"
+          style="width:180px;height:180px;top:5%;left:85%;background:linear-gradient(135deg,#C5A059,transparent);opacity:0.04;">
+        </div>
+        <div class="morph-shape absolute"
+          style="width:220px;height:220px;top:70%;left:2%;background:linear-gradient(135deg,#381018,transparent);opacity:0.03;animation-delay:7s;">
+        </div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto w-full text-center mb-6">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Eminent Speakers
+          </p>
+        </div>
+
+        <div class="mx-auto mt-6 flex flex-wrap justify-center gap-x-8 gap-y-8 max-w-[96%]">
+          <!-- Speaker 1: Uday Ray -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="1">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/udaya.jpg" alt="Uday Ray Wagle"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Uday Ray Wagle</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Arizona
+              University</p>
+          </div>
+          <!-- Speaker 2: Karamjeet Singh -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="2">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/karamjeet.jpg" alt="Karamjeet Singh"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. (Dr.) Karamjeet Singh</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">
+              Vice-Chancellor of Guru Nanak Dev University, Punjab</p>
+          </div>
+          <!-- Speaker 3: Sugata Marjit -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="3">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/sugata.jpg" alt="Sugata Marjit"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Sugata Marjit</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Former Vice
+              Chancellor, University of Calcutta and First Distinguished Professor, IIFT</p>
+          </div>
+          <!-- Speaker 4: Mohan Munasinghe -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="4">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/mohan.jpg" alt="Mohan Munasinghe"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Mohan Munasinghe</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Nobel Peace
+              Prize Recipient 2007</p>
+          </div>
+          <!-- Speaker 5: Amitabh Kundu -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="1">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/amitabhKundu.jpg" alt="Amitabh Kundu"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Amitabh Kundu</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Jawaharlal
+              Nehru University</p>
+          </div>
+          <!-- Speaker 6: Manoranjan Sahu -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="2">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/manoranjan.jpg" alt="Manoranjan Sahu"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Padma Shri Prof. Manoranjan Sahu</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Former Professor and Dean, Dept. of Ayurveda, Benaras Hindu University &amp; Former Director, All India Institute of Ayurveda, New Delhi</p>
+          </div>
+          <!-- Speaker 7: Gopa Samanta -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="3">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/GopaSamanta.jpg" alt="Gopa Samanta"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Gopa Samanta</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">University
+              of Burdwan</p>
+          </div>
+          <!-- Speaker 8: Neetha N -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="4">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/neetha.jpg" alt="Neetha N"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Neetha N</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Centre for
+              Women's Development Studies, New Delhi</p>
+          </div>
+          <!-- Speaker 9: Dominic Savio -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="5">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/dominicSavio.jpg" alt="Rev Dr. Dominic Savio, SJ"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Rev Dr. Dominic Savio, SJ</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">St. Xavier's
+              College, Kolkata</p>
+          </div>
+          <!-- Speaker 10: Gurudas Nulkar -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="5">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/gurudasNulkar.jpg" alt="Gurudas Nulkar"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Gurudas Nulkar</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Centre for
+              Sustainable Development, Gokhale Institute, Pune</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-8 sm:py-10" style="background-color:#FAFAFA;">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center mb-8">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Contact Details
+          </p>
+        </div>
+
+        <div class="mx-auto mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <!-- Contact 1 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="1">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Nilanjana Das Chatterjee</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Geography, Vidyasagar University</p>
+              <div class="mt-3 flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>7407300368</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact 2 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="2">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Pinaki Das</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Economics, Vidyasagar University</p>
+              <div class="mt-3 flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>9732503212</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact 3 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="3">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Abhijit Sinha</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Commerce, Vidyasagar University</p>
+              <div class="mt-auto mb-auto flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>9433307607</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Info Email Line -->
+        <p class="mt-8 text-center text-base text-gray-600 reveal" data-delay="3">
+          For any information/clarification, send mail to
+          <a href="mailto:sscvu@mail.vidyasagar.ac.in"
+            class="font-semibold text-[#C5A059] hover:text-[#381018] underline underline-offset-2 transition-colors">sscvu@mail.vidyasagar.ac.in</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== QR FULLSCREEN MODAL ==================== -->
+    <div id="qr-modal" class="hidden fixed left-0 right-0 bottom-0 z-[996] flex items-center justify-center"
+      style="background: rgba(0,0,0,0.88); backdrop-filter: blur(6px);">
+      <!-- Close overlay (background click) -->
+      <div class="absolute inset-0" onclick="closeQrModal()"></div>
+      <!-- Modal content -->
+      <div class="relative z-10 flex flex-col items-center px-4">
+        <!-- Outer wrapper: positions close button relative to the glow card -->
+        <div class="relative" style="display:inline-block;">
+          <!-- QR wrapper: overflow:hidden clips the spinning gradient to just the border -->
+          <div id="qr-modal-wrapper" class="relative rounded-2xl p-[3px] overflow-hidden" style="display:inline-block;">
+            <!-- Spinning conic glow layer (clipped by overflow:hidden to thin border) -->
+            <div style="
+              position: absolute;
+              inset: -100%;
+              animation: spinBorder 3s linear infinite;
+              background: conic-gradient(from 90deg at 50% 50%, transparent 0%, #d4af37 60%, transparent 100%);
+              border-radius: 999px;
+              z-index: 0;
+            "></div>
+            <!-- QR Image sits on top, z-index:10 -->
+            <img src="images/QR.png" alt="UPI QR Code" class="relative z-10 block rounded-xl shadow-2xl"
+              style="max-height: calc(100vh - var(--navbar-h, 70px) - 100px); max-width: 85vw; width: auto; height: auto;" />
+          </div>
+          <!-- Close button: outside overflow:hidden so it is NOT clipped -->
+          <button onclick="closeQrModal()"
+            class="absolute -top-3 -right-3 z-20 w-9 h-9 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl text-base font-bold
+                   transition-all duration-150 hover:bg-red-500 hover:scale-110 active:scale-90 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1"
+            title="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <p class="mt-5 text-white text-base font-medium tracking-wide">Scan to Pay (UPI)</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background-color:#381018;border-top:1px solid rgba(197,160,89,0.2);" class="text-white py-6">
+    <div class="mx-auto max-w-[96%] px-6 lg:px-8 flex flex-col items-center justify-center">
+      <p class="text-sm text-gray-400 text-center">
+        &copy; 2026 Vidyasagar University. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Site JavaScript (deferred so DOM is ready) -->
+  <script>
+    function openQrModal() {
+      var navbar = document.getElementById('navbar');
+      var navH = navbar ? navbar.getBoundingClientRect().height : 64;
+      var modal = document.getElementById('qr-modal');
+      modal.style.top = navH + 'px';
+      document.documentElement.style.setProperty('--navbar-h', navH + 'px');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQrModal() {
+      document.getElementById('qr-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeQrModal();
+    });
+  </script>
+  <script src="main.js" defer></script>
+</body>
+
+</html>
