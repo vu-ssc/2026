@@ -1,2 +1,1 @@
-# 2026
-Social Science Conclave 2026, Vidyasagar University
+# Social Science Conclave 2026, Vidyasagar University
