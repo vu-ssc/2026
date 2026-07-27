@@ -123,7 +123,7 @@
       style="background-color:#381018;">
 
       <!-- ---- Slideshow image layer ---- -->
-      <div id="hero-slides" class="absolute inset-0 z-[2]" aria-hidden="true"></div>
+      <div id="hero-slides" class="absolute inset-0 z-0" aria-hidden="true"></div>
 
       <!-- Dark overlay so text stays readable -->
       <div class="absolute inset-0 z-[1] pointer-events-none"
@@ -207,7 +207,7 @@
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 reveal" data-delay="3">
           <a href="https://forms.gle/Tk3QgXWZqqVqDn5r8" target="_blank" rel="noopener noreferrer" id="btn-register"
-            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full bg-white text-[#381018] hover:-translate-y-1 hover:shadow-xl tra[...]
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full bg-white text-[#381018] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
             <span class="ripple-circle"></span>
             <span class="relative z-10 flex items-center">
               Register Now
@@ -215,7 +215,7 @@
             </span>
           </a>
           <a href="https://forms.gle/bePB1m9xZHzGcxvZ6" target="_blank" rel="noopener noreferrer" id="btn-submit"
-            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white backdrop-blur-sm hover:-translate-y-1 hover:shadow-xl[...]
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white backdrop-blur-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
             style="background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.10);">
             <span class="ripple-circle"></span>
             <span class="relative z-10 flex items-center">
@@ -497,3 +497,675 @@
           <canvas id="timeline-canvas" class="hidden md:block absolute inset-0 pointer-events-none"
             style="z-index:1;"></canvas>
 
+
+
+          <!-- Items wrapper -->
+          <div class="relative" style="z-index:3;">
+            <!-- Mobile: plain left border -->
+            <div class="relative border-l border-gray-200 ml-3 md:ml-0 md:border-none">
+
+              <div class="space-y-4">
+
+                <!-- Item 1: Submission of abstract | color: green -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="1" data-color="#22c55e" data-glow="rgba(34,197,94,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Submission of
+                      abstract</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#22c55e;">
+                      August 12, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Submission of abstract</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#22c55e;">August 12, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 2: Intimation of acceptance | color: lime/yellow-green -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="2" data-color="#84cc16" data-glow="rgba(132,204,22,0.7)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Intimation of
+                      acceptance</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#84cc16;">
+                      August 15, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Intimation of acceptance</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#84cc16;">August 15, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 3: Early bird registration | color: yellow -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="3" data-color="#eab308" data-glow="rgba(234,179,8,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Early bird
+                      registration</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#eab308;">
+                      August 20, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Early bird registration</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#eab308;">August 20, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 4: Late Bird Registration | color: orange -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="3" data-color="#f97316" data-glow="rgba(249,115,22,0.7)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Late Bird
+                      Registration</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#f97316;">
+                      August 25, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Late Bird Registration</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#f97316;">August 25, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 5: Submission of full paper | color: red -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="4" data-color="#ef4444" data-glow="rgba(239,68,68,0.7)">
+                  <div class="hidden md:block w-1/2 pr-14 text-right">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Submission of full
+                      paper</h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#ef4444;">
+                      August 31, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Submission of full paper</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#ef4444;">August 31, 2026</p>
+                  </div>
+                </div>
+
+                <!-- Item 6: Conclave Dates | color: gold -->
+                <div
+                  class="tl-item relative flex flex-col md:flex-row items-start md:items-center justify-between reveal"
+                  data-delay="5" data-color="#d4af37" data-glow="rgba(212,175,55,0.85)">
+                  <div class="hidden md:block w-1/2 pl-14 ml-auto text-left">
+                    <h3 class="tl-title text-xl font-bold text-[#381018] transition-all duration-300">Conclave Dates
+                    </h3>
+                    <p class="tl-date mt-1 text-sm font-semibold transition-all duration-300" style="color:#d4af37;">
+                      September 8-9, 2026</p>
+                  </div>
+                  <div class="tl-node-wrap absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 z-10"
+                    style="top:50%;transform:translateY(-50%) translateX(-50%);">
+                    <div class="tl-node flex items-center justify-center rounded-full transition-all duration-400"
+                      style="width:14px;height:14px;background:#fff;border:2px solid #d1d5db;box-shadow:none;">
+                      <div class="tl-dot rounded-full transition-all duration-400"
+                        style="width:8px;height:8px;background:#d1d5db;"></div>
+                    </div>
+                  </div>
+                  <div class="pl-8 md:hidden">
+                    <h3 class="text-xl font-bold text-[#381018]">Conclave Dates</h3>
+                    <p class="mt-1 text-sm font-semibold" style="color:#d4af37;">September 8-9, 2026</p>
+                  </div>
+                </div>
+
+              </div><!-- /space-y-4 -->
+            </div>
+          </div><!-- /z-index:3 -->
+        </div><!-- /#timeline-interactive -->
+
+        <!-- Paper Submission Box -->
+        <div id="submit"
+          class="mt-6 mx-auto max-w-none bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 text-center reveal"
+          data-delay="2">
+          <h3 class="text-3xl font-bold text-[#381018] font-serif mb-6">Paper Submission</h3>
+          <p class="text-lg text-gray-700 mb-6 w-full mx-auto text-center">
+            For any kind of correspondence relating to the Conclave, email should be sent
+            to
+            <a href="mailto:sscvu@mail.vidyasagar.ac.in"
+              class="text-[#C5A059] font-semibold hover:text-[#DFBA6B] underline-gold">sscvu@mail.vidyasagar.ac.in</a>
+          </p>
+          <p class="text-lg text-gray-700 mb-8 flex items-center justify-center gap-4 flex-wrap">
+            For submission details,
+            <a href="public/submission-guidelines.pdf" target="_blank" rel="noopener noreferrer" id="btn-submission"
+              class="ripple-btn group inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold uppercase tracking-wider rounded-full text-white hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              style="background:#C5A059;">
+              <span class="ripple-circle"></span>
+              <span class="relative z-10">CLICK HERE</span>
+            </a>
+          </p>
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <p class="text-sm font-medium text-gray-600 italic">
+              Note: Registration is mandatory for paper presenters. Selected papers will be published by a reputed
+              International publication house.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REGISTRATION (Pricing) ==================== -->
+    <section id="register" class="py-8 sm:py-10" style="background-color:#FAFAFA;">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Registration Details
+          </p>
+        </div>
+
+        <div class="mx-auto mt-8 w-full overflow-hidden rounded-3xl shadow-lg ring-1 ring-gray-200 bg-white reveal"
+          data-delay="1">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm text-gray-700">
+              <thead style="background:#381018;color:white;">
+                <tr>
+                  <th scope="col" class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap">Categories</th>
+                  <th scope="col"
+                    class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap border-l border-white/20">
+                    Early Bird Registration<br />
+                    <span class="text-sm font-normal text-gray-300">(within 20th August, 2026)</span>
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 sm:py-4 font-semibold text-base whitespace-nowrap border-l border-white/20">
+                    Registration Fees<br />
+                    <span class="text-sm font-normal text-gray-300">(after 20th August, 2026)</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover-row">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Faculty members / Early career professionals
+                  </td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 2000</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 2500</td>
+                </tr>
+                <tr class="hover-row" style="background:rgba(249,250,251,0.5);">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Research Scholars</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 750</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 1000</td>
+                </tr>
+                <tr class="hover-row">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Corporate Delegates</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 3000</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">Rs. 3500</td>
+                </tr>
+                <tr class="hover-row" style="background:rgba(249,250,251,0.5);">
+                  <td class="px-6 py-3 sm:py-4 font-medium text-gray-900">Foreign delegates</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">$ 50</td>
+                  <td class="px-6 py-3 sm:py-4 border-l border-gray-200">$ 60</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="mt-6 mx-auto w-full bg-white rounded-3xl p-10 ring-1 ring-gray-200 shadow-xl reveal" data-delay="2">
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold text-[#381018] font-serif">Payment Details</h3>
+            <p class="mt-3 text-base text-gray-600">The registration is to be paid online through NEFT/UPI.</p>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8">
+            <!-- Bank Details -->
+            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex-1">
+              <h4 class="text-lg font-semibold text-[#381018] mb-5 border-b pb-3">Bank Details</h4>
+              <ul class="space-y-4 text-base text-gray-700">
+                <li><span class="font-medium">Name of Beneficiary:</span> Social Science Conclave</li>
+                <li><span class="font-medium">Account Number:</span> 17480110111406</li>
+                <li><span class="font-medium">Type of Account:</span> Savings</li>
+                <li><span class="font-medium">Name of the Bank:</span> UCO Bank</li>
+                <li><span class="font-medium">Branch:</span> Vidyasagar University Branch, Midnapore</li>
+                <li><span class="font-medium">IFSC:</span> UCBA0001748</li>
+                <li><span class="font-medium">Swift Code:</span> UCBAINDB102</li>
+              </ul>
+              <p class="mt-6 text-sm text-gray-500 italic border-t pt-4 border-gray-200">
+                * Note: The proof of payment is to be produced at the time of registration. Spot registration is not
+                allowed.
+              </p>
+            </div>
+            <!-- QR Code -->
+            <div
+              class="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-8 border border-gray-100 md:w-96 shrink-0">
+              <p class="text-base font-semibold text-[#381018] mb-4 uppercase tracking-wider">Scan to Pay (UPI)</p>
+              <img id="qr-img" src="images/QR.png" alt="UPI QR Code"
+                class="w-80 h-80 object-contain rounded-xl shadow-md" />
+              <p class="mt-4 text-sm text-gray-500 text-center">Scan the QR code with any UPI app to make payment</p>
+              <!-- Full Screen Button -->
+              <button id="qr-fullscreen-btn" onclick="openQrModal()"
+                class="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-[#381018] text-white hover:bg-[#C5A059] transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95">
+                <i class="bi bi-fullscreen"></i>
+                Full Screen
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 reveal" data-delay="3">
+          <a href="https://forms.gle/Tk3QgXWZqqVqDn5r8" target="_blank" rel="noopener noreferrer"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="background:#381018;">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              Register Now
+              <i class="bi bi-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </span>
+          </a>
+          <a href="https://forms.gle/bePB1m9xZHzGcxvZ6" target="_blank" rel="noopener noreferrer"
+            class="ripple-btn group w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-full text-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="background:#C5A059;">
+            <span class="ripple-circle"></span>
+            <span class="relative z-10 flex items-center">
+              <i class="bi bi-file-text mr-2"></i>
+              Submit Paper
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SPEAKERS ==================== -->
+    <section id="speakers" class="relative bg-white py-8 sm:py-10 overflow-hidden">
+      <!-- Abstract background shapes -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="section-blob-1 absolute rounded-full blur-3xl"
+          style="width:40vw;height:40vw;top:10%;left:10%;background:rgba(30,58,138,0.03);"></div>
+        <div class="section-blob-2 absolute rounded-full blur-3xl"
+          style="width:50vw;height:50vw;bottom:-10%;right:10%;background:rgba(197,160,89,0.03);"></div>
+        <div class="section-blob-3 absolute rounded-full blur-3xl"
+          style="width:45vw;height:45vw;top:40%;left:-20%;background:rgba(16,185,129,0.02);"></div>
+        <!-- Morphing shapes -->
+        <div class="morph-shape absolute"
+          style="width:180px;height:180px;top:5%;left:85%;background:linear-gradient(135deg,#C5A059,transparent);opacity:0.04;">
+        </div>
+        <div class="morph-shape absolute"
+          style="width:220px;height:220px;top:70%;left:2%;background:linear-gradient(135deg,#381018,transparent);opacity:0.03;animation-delay:7s;">
+        </div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto w-full text-center mb-6">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Eminent Speakers
+          </p>
+        </div>
+
+        <div class="mx-auto mt-6 flex flex-wrap justify-center gap-x-8 gap-y-8 max-w-[96%]">
+          <!-- Speaker 1: Uday Ray -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="1">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/udaya.jpg" alt="Uday Ray Wagle"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Udaya Raj Wagle</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Arizona
+              University</p>
+          </div>
+          <!-- Speaker 2: Karamjeet Singh -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="2">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/karamjeet.jpg" alt="Karamjeet Singh"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. (Dr.) Karamjeet Singh</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">
+              Vice-Chancellor of Guru Nanak Dev University, Punjab</p>
+          </div>
+          <!-- Speaker 3: Sugata Marjit -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="3">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/sugata.jpg" alt="Sugata Marjit"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Sugata Marjit</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Director,
+              STAREBS (School for Training and Analytical Research in Economics, Business and Society)</p>
+          </div>
+          <!-- Speaker 4: Mohan Munasinghe -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="4">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/mohan.jpg" alt="Mohan Munasinghe"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Mohan Munasinghe</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[280px]">Vice-Chair,
+              Intergovernmental Panel on Climate Change (IPCC), Awarded with 2007, Nobel Peace Prize</p>
+          </div>
+          <!-- Speaker 5: Amitabh Kundu -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="1">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/amitabhKundu.jpg" alt="Amitabh Kundu"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Amitabh Kundu</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Jawaharlal
+              Nehru University</p>
+          </div>
+          <!-- Speaker 6: Manoranjan Sahu -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="2">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/manoranjan.jpg" alt="Manoranjan Sahu"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Padma Shri Prof. Manoranjan Sahu</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[280px]">Former
+              Professor and Dean, Dept. of Ayurveda, Banaras Hindu University &amp; Former Director, All India Institute
+              of Ayurveda, New Delhi</p>
+          </div>
+          <!-- Speaker 7: Gopa Samanta -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="3">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/GopaSamanta.jpg" alt="Gopa Samanta"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Gopa Samanta</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">University
+              of Burdwan</p>
+          </div>
+          <!-- Speaker 8: Neetha N -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="4">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/neetha.jpg" alt="Neetha N"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Neetha N</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Centre for
+              Women's Development Studies, New Delhi</p>
+          </div>
+          <!-- Speaker 9: Dominic Savio -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="5">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/dominicSavio.jpg" alt="Rev Dr. Dominic Savio, SJ"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Rev Dr. Dominic Savio, SJ</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">St. Xavier's
+              College, Kolkata</p>
+          </div>
+          <!-- Speaker 10: Gurudas Nulkar -->
+          <div
+            class="speaker-card group flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] reveal"
+            data-delay="5">
+            <div
+              class="relative w-48 h-48 mb-6 rounded-full p-[3px] group-hover:shadow-[0_0_15px_rgba(128,0,32,0.4)] transition-all duration-500 overflow-hidden">
+              <div class="spin-border-round"></div>
+              <div
+                class="relative z-10 w-full h-full overflow-hidden rounded-full ring-4 ring-gray-50 group-hover:ring-transparent bg-gray-100 transition-colors duration-500">
+                <img src="images/gurudasNulkar.jpg" alt="Gurudas Nulkar"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Gurudas Nulkar</h3>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Centre for
+              Sustainable Development, Gokhale Institute, Pune</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-8 sm:py-10" style="background-color:#FAFAFA;">
+      <div class="mx-auto max-w-[96%] px-6 lg:px-8">
+        <div class="mx-auto max-w-none text-center mb-8">
+          <p class="mt-2 text-4xl font-bold tracking-tight text-[#381018] font-serif sm:text-5xl reveal">
+            Contact Details
+          </p>
+        </div>
+
+        <div class="mx-auto mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <!-- Contact 1 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="1">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Nilanjana Das Chatterjee</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Geography &amp; Coordinator, Department
+                of Population and Development Studies, Vidyasagar University</p>
+              <div class="mt-3 flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>7407300368</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact 2 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="2">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Pinaki Das</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Economics, Vidyasagar University</p>
+              <div class="mt-3 flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>9732503212</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact 3 -->
+          <div
+            class="contact-card flex flex-col rounded-3xl p-[2px] shadow-sm transition-all hover:shadow-xl relative overflow-hidden group hover-lift reveal"
+            data-delay="3">
+            <div class="spin-border-conic"></div>
+            <div
+              class="relative z-10 bg-white h-full w-full rounded-[22px] p-5 flex flex-col ring-1 ring-gray-200 group-hover:ring-transparent transition-all">
+              <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <i class="bi bi-person text-[#381018] text-8xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-[#381018] mb-1">Prof. Abhijit Sinha</h3>
+              <p class="text-sm font-medium text-[#C5A059] mb-2">Department of Commerce, Vidyasagar University</p>
+              <div class="mt-auto mb-auto flex flex-col gap-3 text-sm text-gray-600">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:border-[#C5A059]/40 group-hover:bg-[#faf4e1] transition-colors">
+                    <i class="bi bi-telephone text-gray-500 group-hover:text-[#C5A059]"></i>
+                  </div>
+                  <span>9433307607</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Info Email Line -->
+        <p class="mt-8 text-center text-base text-gray-600 reveal" data-delay="3">
+          For any information/clarification, send mail to
+          <a href="mailto:sscvu@mail.vidyasagar.ac.in"
+            class="font-semibold text-[#C5A059] hover:text-[#381018] underline underline-offset-2 transition-colors">sscvu@mail.vidyasagar.ac.in</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== QR FULLSCREEN MODAL ==================== -->
+    <div id="qr-modal" class="hidden fixed left-0 right-0 bottom-0 z-[996] flex items-center justify-center"
+      style="background: rgba(0,0,0,0.88); backdrop-filter: blur(6px);">
+      <!-- Close overlay (background click) -->
+      <div class="absolute inset-0" onclick="closeQrModal()"></div>
+      <!-- Modal content -->
+      <div class="relative z-10 flex flex-col items-center px-4">
+        <!-- Outer wrapper: positions close button relative to the glow card -->
+        <div class="relative" style="display:inline-block;">
+          <!-- QR wrapper: overflow:hidden clips the spinning gradient to just the border -->
+          <div id="qr-modal-wrapper" class="relative rounded-2xl p-[3px] overflow-hidden" style="display:inline-block;">
+            <!-- Spinning conic glow layer (clipped by overflow:hidden to thin border) -->
+            <div style="
+              position: absolute;
+              inset: -100%;
+              animation: spinBorder 3s linear infinite;
+              background: conic-gradient(from 90deg at 50% 50%, transparent 0%, #d4af37 60%, transparent 100%);
+              border-radius: 999px;
+              z-index: 0;
+            "></div>
+            <!-- QR Image sits on top, z-index:10 -->
+            <img src="images/QR.png" alt="UPI QR Code" class="relative z-10 block rounded-xl shadow-2xl"
+              style="max-height: calc(100vh - var(--navbar-h, 70px) - 100px); max-width: 85vw; width: auto; height: auto;" />
+          </div>
+          <!-- Close button: outside overflow:hidden so it is NOT clipped -->
+          <button onclick="closeQrModal()"
+            class="absolute -top-3 -right-3 z-20 w-9 h-9 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl text-base font-bold
+                   transition-all duration-150 hover:bg-red-500 hover:scale-110 active:scale-90 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1"
+            title="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <p class="mt-5 text-white text-base font-medium tracking-wide">Scan to Pay (UPI)</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background-color:#381018;border-top:1px solid rgba(197,160,89,0.2);" class="text-white py-6">
+    <div class="mx-auto max-w-[96%] px-6 lg:px-8 flex flex-col items-center justify-center">
+      <p class="text-sm text-gray-400 text-center">
+        &copy; 2026 Vidyasagar University. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Site JavaScript (deferred so DOM is ready) -->
+  <script>
+    function openQrModal() {
+      var navbar = document.getElementById('navbar');
+      var navH = navbar ? navbar.getBoundingClientRect().height : 64;
+      var modal = document.getElementById('qr-modal');
+      modal.style.top = navH + 'px';
+      document.documentElement.style.setProperty('--navbar-h', navH + 'px');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQrModal() {
+      document.getElementById('qr-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeQrModal();
+    });
+  </script>
+  <script src="main.js" defer></script>
+</body>
+
+</html>
