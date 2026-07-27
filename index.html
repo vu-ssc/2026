@@ -119,13 +119,23 @@
   <main class="relative z-10">
 
     <!-- ==================== HERO ==================== -->
-    <section class="relative overflow-hidden pt-16 sm:pt-18 pb-12 sm:pb-16" style="background-color:#381018;">
+    <section id="hero-section" class="relative overflow-hidden pt-16 sm:pt-18 pb-12 sm:pb-16"
+      style="background-color:#381018;">
+
+      <!-- ---- Slideshow image layer ---- -->
+      <div id="hero-slides" class="absolute inset-0 z-0" aria-hidden="true"></div>
+
+      <!-- Dark overlay so text stays readable -->
+      <div class="absolute inset-0 z-[1] pointer-events-none"
+        style="background:linear-gradient(to bottom,rgba(30,4,12,0.62) 0%,rgba(30,4,12,0.50) 60%,rgba(30,4,12,0.72) 100%);">
+      </div>
+
       <!-- Background blobs -->
-      <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
         <div class="blob1 absolute rounded-full blur-[120px]"
-          style="width:70%;height:70%;top:-20%;right:-10%;background:rgba(197,160,89,0.30);"></div>
+          style="width:70%;height:70%;top:-20%;right:-10%;background:rgba(197,160,89,0.18);"></div>
         <div class="blob2 absolute rounded-full blur-[120px]"
-          style="width:60%;height:60%;bottom:-20%;left:-10%;background:rgba(185,70,70,0.30);"></div>
+          style="width:60%;height:60%;bottom:-20%;left:-10%;background:rgba(185,70,70,0.18);"></div>
         <!-- Mouse follower -->
         <div id="mouse-follower"></div>
         <!-- Grid -->
@@ -134,7 +144,30 @@
         <div id="particles-container"></div>
       </div>
 
-      <div class="relative z-10 max-w-[96%] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-0 pb-8">
+      <!-- LEFT nav button -->
+      <button id="hero-prev" aria-label="Previous image" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);z-index:20;
+               width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;
+               background:rgba(255,255,255,0.13);backdrop-filter:blur(6px);
+               display:flex;align-items:center;justify-content:center;
+               transition:background 0.25s,transform 0.2s;outline:none;">
+        <i class="bi bi-chevron-left" style="color:#fff;font-size:1.3rem;"></i>
+      </button>
+
+      <!-- RIGHT nav button -->
+      <button id="hero-next" aria-label="Next image" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);z-index:20;
+               width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;
+               background:rgba(255,255,255,0.13);backdrop-filter:blur(6px);
+               display:flex;align-items:center;justify-content:center;
+               transition:background 0.25s,transform 0.2s;outline:none;">
+        <i class="bi bi-chevron-right" style="color:#fff;font-size:1.3rem;"></i>
+      </button>
+
+      <!-- Dot indicators -->
+      <div id="hero-dots" style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+               z-index:20;display:flex;gap:7px;align-items:center;pointer-events:none;">
+      </div>
+
+      <div class="relative z-[10] max-w-[96%] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-0 pb-8">
         <!-- University Logo -->
         <div class="flex flex-col items-center mb-6 reveal" id="hero-logo">
           <div class="logo-circle-hero w-24 h-24 sm:w-28 sm:h-28 rounded-full mb-4">
@@ -149,7 +182,7 @@
         <h1
           class="text-2xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-6 font-serif uppercase reveal"
           data-delay="1">
-          Social Science Conclave 2026
+          International Social Science Conclave 2026
           <br class="hidden md:block" />
           <span class="text-[#DFBA6B] capitalize text-xl md:text-3xl lg:text-4xl mt-3 block font-serif">
             Inclusive Development, Social Justice, and Climate Resilience
@@ -813,7 +846,7 @@
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
             </div>
-            <h3 class="text-xl font-bold text-[#381018]">Prof. Uday Ray Wagle</h3>
+            <h3 class="text-xl font-bold text-[#381018]">Prof. Udaya Raj Wagle</h3>
             <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[200px]">Arizona
               University</p>
           </div>
@@ -865,8 +898,8 @@
               </div>
             </div>
             <h3 class="text-xl font-bold text-[#381018]">Prof. Mohan Munasinghe</h3>
-            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[280px]">Nobel Peace
-              Prize Recipient 2007, Vice-Chair, Intergovernmental Panel on Climate Change (IPCC)</p>
+            <p class="text-xs mt-2 font-semibold text-gray-500 uppercase tracking-wider mb-4 max-w-[280px]">Vice-Chair,
+              Intergovernmental Panel on Climate Change (IPCC), Awarded with 2007, Nobel Peace Prize</p>
           </div>
           <!-- Speaker 5: Amitabh Kundu -->
           <div

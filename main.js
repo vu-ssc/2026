@@ -345,3 +345,110 @@ updateNavbar();
     new ResizeObserver(() => resizeCanvas()).observe(wrapper);
   }
 })();
+
+// ============================================================
+//  HERO IMAGE SLIDESHOW
+// ============================================================
+(function () {
+  const IMAGES = [
+    'hero_image/st1_1.jpg',
+    'hero_image/st1_2.jpg',
+    'hero_image/st2_1.jpg',
+    'hero_image/st2_2.jpg',
+    'hero_image/st2_3.jpg',
+    'hero_image/st3_1.jpg',
+    'hero_image/st3_2.jpg',
+    'hero_image/st4_1.jpg',
+    'hero_image/st4_2.jpg',
+    'hero_image/st5_1.jpg',
+    'hero_image/st5_2.jpg',
+    'hero_image/st5_3.jpg',
+  ];
+
+  const AUTO_INTERVAL = 3000;   // ms between auto-advances
+  const MANUAL_HOLD   = 5000;   // ms to hold after a button press
+  const FADE_DURATION = 700;    // ms crossfade
+
+  const slidesWrap = document.getElementById('hero-slides');
+  const dotsWrap   = document.getElementById('hero-dots');
+  const prevBtn    = document.getElementById('hero-prev');
+  const nextBtn    = document.getElementById('hero-next');
+  if (!slidesWrap || !prevBtn || !nextBtn) return;
+
+  let currentIdx = 0;
+  let timer      = null;
+
+  // ---- Build slide divs (stacked, crossfade via opacity) ----
+  const slides = IMAGES.map((src, i) => {
+    const div = document.createElement('div');
+    div.style.cssText = [
+      'position:absolute;inset:0;',
+      `background:url('${src}') center/cover no-repeat;`,
+      `opacity:${i === 0 ? 1 : 0};`,
+      `transition:opacity ${FADE_DURATION}ms ease-in-out;`,
+    ].join('');
+    slidesWrap.appendChild(div);
+    return div;
+  });
+
+  // ---- Build dot indicators ----
+  const dots = IMAGES.map((_, i) => {
+    const d = document.createElement('span');
+    d.style.cssText = [
+      'display:inline-block;height:7px;border-radius:4px;',
+      `width:${i === 0 ? 20 : 7}px;`,
+      `background:${i === 0 ? '#DFBA6B' : 'rgba(255,255,255,0.45)'};`,
+      'transition:width 0.35s,background 0.35s;',
+    ].join('');
+    dotsWrap.appendChild(d);
+    return d;
+  });
+
+  // ---- Transition to a target slide index ----
+  function goTo(idx) {
+    slides[currentIdx].style.opacity   = '0';
+    dots[currentIdx].style.width       = '7px';
+    dots[currentIdx].style.background  = 'rgba(255,255,255,0.45)';
+
+    currentIdx = ((idx % IMAGES.length) + IMAGES.length) % IMAGES.length;
+
+    slides[currentIdx].style.opacity   = '1';
+    dots[currentIdx].style.width       = '20px';
+    dots[currentIdx].style.background  = '#DFBA6B';
+  }
+
+  // ---- Schedule next automatic advance ----
+  function scheduleNext(delay) {
+    clearTimeout(timer);
+    timer = setTimeout(function tick() {
+      goTo(currentIdx + 1);
+      timer = setTimeout(tick, AUTO_INTERVAL);
+    }, delay);
+  }
+
+  // ---- Start auto-play ----
+  scheduleNext(AUTO_INTERVAL);
+
+  // ---- Prev / Next button handlers ----
+  prevBtn.addEventListener('click', () => {
+    goTo(currentIdx - 1);
+    scheduleNext(MANUAL_HOLD);   // hold for 5 s then resume 2 s cycle
+  });
+
+  nextBtn.addEventListener('click', () => {
+    goTo(currentIdx + 1);
+    scheduleNext(MANUAL_HOLD);   // hold for 5 s then resume 2 s cycle
+  });
+
+  // ---- Button hover feedback ----
+  [prevBtn, nextBtn].forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      btn.style.background = 'rgba(255,255,255,0.28)';
+      btn.style.transform  = 'translateY(-50%) scale(1.1)';
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.background = 'rgba(255,255,255,0.13)';
+      btn.style.transform  = 'translateY(-50%) scale(1)';
+    });
+  });
+})();
