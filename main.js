@@ -134,9 +134,9 @@ updateNavbar();
 //  INTERACTIVE GLOW TIMELINE
 // ============================================================
 (function () {
-  const section   = document.getElementById('timeline');
-  const wrapper   = document.getElementById('timeline-interactive');
-  const canvas    = document.getElementById('timeline-canvas');
+  const section = document.getElementById('timeline');
+  const wrapper = document.getElementById('timeline-interactive');
+  const canvas = document.getElementById('timeline-canvas');
   if (!section || !wrapper || !canvas) return;
 
   const ctx = canvas.getContext('2d');
@@ -150,15 +150,15 @@ updateNavbar();
   let nearestIdx = -1;
 
   // Each item's data-color / data-glow
-  const itemColors = items.map(el => el.dataset.color  || '#C5A059');
-  const itemGlows  = items.map(el => el.dataset.glow   || 'rgba(197,160,89,0.7)');
+  const itemColors = items.map(el => el.dataset.color || '#C5A059');
+  const itemGlows = items.map(el => el.dataset.glow || 'rgba(197,160,89,0.7)');
 
   // ---- Resize canvas to match wrapper ----
   function resizeCanvas() {
     // wrapper may not have explicit height, use section's clientWidth/Height
-    const w = wrapper.clientWidth  || section.clientWidth  || window.innerWidth;
+    const w = wrapper.clientWidth || section.clientWidth || window.innerWidth;
     const h = wrapper.scrollHeight || wrapper.clientHeight || 600;
-    if (canvas.width !== w)  canvas.width  = w;
+    if (canvas.width !== w) canvas.width = w;
     if (canvas.height !== h) canvas.height = h;
   }
 
@@ -207,8 +207,8 @@ updateNavbar();
 
     if (isInside && mouseY > 0) {
       // Cap the beam at the last node's Y (Conclave Dates)
-      const lastY  = nodeYs[nodeYs.length - 1] || canvas.height;
-      const beamY  = Math.min(mouseY, lastY);
+      const lastY = nodeYs[nodeYs.length - 1] || canvas.height;
+      const beamY = Math.min(mouseY, lastY);
 
       // Glow beam from top to beamY
       const col = colorAtY(beamY, nodeYs);
@@ -247,14 +247,14 @@ updateNavbar();
     // 5. Update & draw particles
     particles = particles.filter(p => p.alpha > 0.01);
     particles.forEach(p => {
-      p.x   += p.vx;
-      p.y   += p.vy;
+      p.x += p.vx;
+      p.y += p.vy;
       p.alpha -= p.decay;
       ctx.save();
       ctx.globalAlpha = p.alpha;
-      ctx.shadowBlur  = 12;
+      ctx.shadowBlur = 12;
       ctx.shadowColor = p.color;
-      ctx.fillStyle   = p.color;
+      ctx.fillStyle = p.color;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
@@ -280,16 +280,16 @@ updateNavbar();
     deactivateAll();
 
     if (idx >= 0) {
-      const item  = items[idx];
-      const node  = item.querySelector('.tl-node');
-      const dot   = item.querySelector('.tl-dot');
-      const col   = itemColors[idx];
-      const glow  = itemGlows[idx];
+      const item = items[idx];
+      const node = item.querySelector('.tl-node');
+      const dot = item.querySelector('.tl-dot');
+      const col = itemColors[idx];
+      const glow = itemGlows[idx];
       item.classList.add('tl-active');
       item.style.setProperty('--item-glow', glow);
       if (node) {
-        node.style.borderColor  = col;
-        node.style.boxShadow    = `0 0 0 5px ${glow.replace('0.7','0.18')}, 0 0 20px ${glow}`;
+        node.style.borderColor = col;
+        node.style.boxShadow = `0 0 0 5px ${glow.replace('0.7', '0.18')}, 0 0 20px ${glow}`;
       }
       if (dot) dot.style.background = col;
 
@@ -304,16 +304,16 @@ updateNavbar();
       item.classList.remove('tl-active');
       item.style.removeProperty('--item-glow');
       const node = item.querySelector('.tl-node');
-      const dot  = item.querySelector('.tl-dot');
+      const dot = item.querySelector('.tl-dot');
       if (node) { node.style.borderColor = '#d1d5db'; node.style.boxShadow = 'none'; }
-      if (dot)  { dot.style.background   = '#d1d5db'; }
+      if (dot) { dot.style.background = '#d1d5db'; }
     });
   }
 
   // ---- Mouse events on the whole section ----
   section.addEventListener('mousemove', (e) => {
     const wrapRect = wrapper.getBoundingClientRect();
-    mouseY   = e.clientY - wrapRect.top;
+    mouseY = e.clientY - wrapRect.top;
     isInside = true;
 
     const nodeYs = getNodeYs();
@@ -323,8 +323,8 @@ updateNavbar();
   });
 
   section.addEventListener('mouseleave', () => {
-    isInside   = false;
-    mouseY     = -999;
+    isInside = false;
+    mouseY = -999;
     nearestIdx = -1;
     deactivateAll();
   });
@@ -364,27 +364,29 @@ updateNavbar();
   ];
 
   const AUTO_INTERVAL = 3000;   // ms between auto-advances
-  const MANUAL_HOLD   = 5000;   // ms to hold after a button press
+  const MANUAL_HOLD = 5000;   // ms to hold after a button press
   const FADE_DURATION = 700;    // ms crossfade
 
   const slidesWrap = document.getElementById('hero-slides');
-  const dotsWrap   = document.getElementById('hero-dots');
-  const prevBtn    = document.getElementById('hero-prev');
-  const nextBtn    = document.getElementById('hero-next');
+  const dotsWrap = document.getElementById('hero-dots');
+  const prevBtn = document.getElementById('hero-prev');
+  const nextBtn = document.getElementById('hero-next');
   if (!slidesWrap || !prevBtn || !nextBtn) return;
 
   let currentIdx = 0;
-  let timer      = null;
+  let timer = null;
 
   // ---- Build slide divs (stacked, crossfade via opacity) ----
   const slides = IMAGES.map((src, i) => {
     const div = document.createElement('div');
-    div.style.cssText = [
-      'position:absolute;inset:0;',
-      `background:url('${src}') center/cover no-repeat;`,
-      `opacity:${i === 0 ? 1 : 0};`,
-      `transition:opacity ${FADE_DURATION}ms ease-in-out;`,
-    ].join('');
+    div.style.position = 'absolute';
+    div.style.inset = '0';
+    div.style.backgroundImage = `url('${src}')`;
+    div.style.backgroundSize = 'cover';
+    div.style.backgroundPosition = 'center';
+    div.style.backgroundRepeat = 'no-repeat';
+    div.style.opacity = i === 0 ? '1' : '0';
+    div.style.transition = `opacity ${FADE_DURATION}ms ease-in-out`;
     slidesWrap.appendChild(div);
     return div;
   });
@@ -404,15 +406,15 @@ updateNavbar();
 
   // ---- Transition to a target slide index ----
   function goTo(idx) {
-    slides[currentIdx].style.opacity   = '0';
-    dots[currentIdx].style.width       = '7px';
-    dots[currentIdx].style.background  = 'rgba(255,255,255,0.45)';
+    slides[currentIdx].style.opacity = '0';
+    dots[currentIdx].style.width = '7px';
+    dots[currentIdx].style.background = 'rgba(255,255,255,0.45)';
 
     currentIdx = ((idx % IMAGES.length) + IMAGES.length) % IMAGES.length;
 
-    slides[currentIdx].style.opacity   = '1';
-    dots[currentIdx].style.width       = '20px';
-    dots[currentIdx].style.background  = '#DFBA6B';
+    slides[currentIdx].style.opacity = '1';
+    dots[currentIdx].style.width = '20px';
+    dots[currentIdx].style.background = '#DFBA6B';
   }
 
   // ---- Schedule next automatic advance ----
@@ -442,11 +444,11 @@ updateNavbar();
   [prevBtn, nextBtn].forEach(btn => {
     btn.addEventListener('mouseenter', () => {
       btn.style.background = 'rgba(255,255,255,0.28)';
-      btn.style.transform  = 'translateY(-50%) scale(1.1)';
+      btn.style.transform = 'translateY(-50%) scale(1.1)';
     });
     btn.addEventListener('mouseleave', () => {
       btn.style.background = 'rgba(255,255,255,0.13)';
-      btn.style.transform  = 'translateY(-50%) scale(1)';
+      btn.style.transform = 'translateY(-50%) scale(1)';
     });
   });
 })();
