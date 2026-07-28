@@ -353,10 +353,8 @@ updateNavbar();
   const IMAGES = [
     'hero_image/st1_1.jpg',
     'hero_image/st1_2.jpg',
-    'hero_image/st2_1.jpg',
-    'hero_image/st2_2.jpg',
-    'hero_image/st2_3.jpg',
-    'hero_image/st3_1.jpg',
+    'hero_image/st2_1.jpeg',
+    'hero_image/st3_1.jpeg',
     'hero_image/st3_2.jpg',
     'hero_image/st4_1.jpg',
     'hero_image/st4_2.jpg',
