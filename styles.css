@@ -19,6 +19,14 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  /* Offset for fixed navbar so anchor links don't hide under it */
+  scroll-padding-top: 72px;
+}
+
+/* Extra safety: scroll-margin on every anchor target */
+section[id],
+a[id] {
+  scroll-margin-top: 72px;
 }
 
 /* Selection color */

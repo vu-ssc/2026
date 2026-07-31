@@ -85,6 +85,7 @@
           <a href="#organising-team" class="nav-link">Organising Team</a>
           <a href="#contact" class="nav-link">Contacts</a>
           <a href="#nearest-places" class="nav-link">Nearby Places</a>
+          <a href="#nearby-hotels" class="nav-link">Nearby Hotels</a>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -118,6 +119,8 @@
           class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Contacts</a>
         <a href="#nearest-places" onclick="closeMobileMenu()"
           class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Nearby Places</a>
+        <a href="#nearby-hotels" onclick="closeMobileMenu()"
+          class="block px-3 py-4 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md">Nearby Hotels</a>
       </div>
     </div>
   </header>
@@ -1309,13 +1312,13 @@
       <div class="relative z-10 mx-auto max-w-[96%] lg:max-w-6xl px-6 lg:px-8">
         <div class="mx-auto max-w-none text-center mb-12">
           <p class="mt-2 text-3xl font-bold tracking-tight text-[#381018] font-serif sm:text-4xl reveal">
-            Nearest Places To Visit From The Campus
+            Nearby Places to Visit
           </p>
         </div>
         <div class="flex flex-col items-center justify-center gap-8 reveal" data-delay="1">
           <img src="images/nearPlace.jpeg" alt="Nearest Places to Visit From The Campus"
             class="w-full h-auto object-contain rounded-2xl shadow-lg border border-gray-100" />
-          <a href="public/nearby_hotel.pdf" target="_blank"
+          <a id="nearby-hotels" href="public/nearby_hotel.pdf" target="_blank"
             class="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-bold text-white transition-all bg-[#381018] border border-transparent rounded-full shadow-md hover:bg-[#591A26] hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A059]">
             Nearby Hotels To Stay
           </a>
